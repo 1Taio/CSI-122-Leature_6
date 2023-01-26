@@ -20,9 +20,42 @@ namespace CSI_122_Leature_6
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Student> students = new List<Student>();
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        
+        private void btnAddStudent_Click(object sender, RoutedEventArgs e)
+        {
+
+
+
+            AddStudentToList();
+            DisplayStudents();
+
+        }
+        public void AddStudentToList()
+        {
+            string firstName = txtFirstName.Text;
+            string lastName = txtLastName.Text;
+            double csiGrade = double.Parse(txtCsiGrade.Text);
+            double genEdGrade = double.Parse(txtGenEdGrade.Text);
+
+            students.Add(new Student(firstName, lastName, csiGrade, genEdGrade));
+
+        }
+        public void DisplayStudents()
+
+        {
+            runDisplay.Text = "";
+            //this clears our display
+
+            for (int i = 0; i < students.Count; i++)
+            {
+                runDisplay.Text += students[i] + "\n";
+            }
         }
     }
 }

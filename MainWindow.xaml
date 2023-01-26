@@ -7,6 +7,30 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <RichTextBox HorizontalAlignment="Left" Height="327" Margin="421,0,0,0" VerticalAlignment="Center" Width="293">
+            <FlowDocument>
+                <Paragraph>
+                    <Run x:Name="runDisplay" Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Canvas HorizontalAlignment="Left" Height="321" Margin="71,60,0,0" VerticalAlignment="Top" Width="273">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF414167"/>
+                    <GradientStop Color="#FFED7D7D" Offset="1"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+            <TextBox x:Name="txtLastName" Height="26" TextWrapping="Wrap" Width="67" HorizontalAlignment="Left" Canvas.Left="109" Canvas.Top="116" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtCsiGrade" Height="26" TextWrapping="Wrap" Width="67" HorizontalAlignment="Left" Canvas.Left="26" Canvas.Top="160" VerticalAlignment="Top"/>
+            <Label Content="CSI GRADE" Height="35" Canvas.Left="22" Canvas.Top="125" Width="76"/>
+            <Label Content="Last Name" Height="35" Canvas.Left="109" Canvas.Top="76" Width="76" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="FirstName" Height="35" Canvas.Left="17" Canvas.Top="10" Width="76" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="GenED Grade" Height="31" Canvas.Left="147" Canvas.Top="186" Width="91" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtGenEdGrade" Height="33" Canvas.Left="147" TextWrapping="Wrap" Canvas.Top="217" Width="62" HorizontalAlignment="Center" VerticalAlignment="Top" TextChanged="TextBox_TextChanged"/>
+            <Button x:Name="btnAddStudent" Content="Add Student" Height="27" Canvas.Left="93" Canvas.Top="271" Width="83" Click="btnAddStudent_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </Canvas>
+        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Height="26" Margin="90,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67"/>
 
     </Grid>
 </Window>
